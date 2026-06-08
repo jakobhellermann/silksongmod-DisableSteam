@@ -21,7 +21,7 @@
 
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>icon.png</PackageIcon>
-    <RepositoryUrl>https://github.com/YourGitHubUsername/SilksongPlayground</RepositoryUrl>
+    <RepositoryUrl>https://github.com/jakobhellermann/SilksongPlayground</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="BepInEx.Analyzers" Version="1.0.8" PrivateAssets="all" />
@@ -61,7 +61,7 @@
     <!-- Local install -->
     <Copy
       SourceFiles="@(Binaries)"
-      DestinationFolder="$(SilksongPluginsFolder)/YourGitHubUsername-$(AssemblyTitle)/%(Binaries.LocalDir)"
+      DestinationFolder="$(SilksongPluginsFolder)/jakobhellermann-$(AssemblyTitle)/%(Binaries.LocalDir)"
       Condition="'$(SilksongPluginsFolder)' != '' And Exists('$(SilksongPluginsFolder)')"
     />
 

@@ -3,7 +3,7 @@ using BepInEx;
 namespace SilksongPlayground;
 
 // TODO - adjust the plugin guid as needed
-[BepInAutoPlugin(id: "io.github.yourgithubusername.silksongplayground")]
+[BepInAutoPlugin(id: "io.github.jakobhellermann.silksongplayground")]
 public partial class SilksongPlaygroundPlugin : BaseUnityPlugin
 {
     private void Awake()
