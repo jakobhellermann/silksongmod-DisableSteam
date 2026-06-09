@@ -1,6 +1,6 @@
 using BepInEx.Logging;
 
-namespace SilksongPlayground.Source;
+namespace DisableSteam.Source;
 
 internal static class Log {
     private static ManualLogSource? logSource;

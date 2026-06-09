@@ -1,12 +1,12 @@
 using BepInEx;
 using HarmonyLib;
-using SilksongPlayground.Source;
+using DisableSteam.Source;
 
-namespace SilksongPlayground;
+namespace DisableSteam;
 
 // TODO - adjust the plugin guid as needed
 [BepInAutoPlugin(id: "io.github.jakobhellermann.silksongplayground")]
-public partial class SilksongPlaygroundPlugin : BaseUnityPlugin
+public partial class DisableSteamPlugin : BaseUnityPlugin
 {
     private Harmony harmony = null!;
 
@@ -14,7 +14,7 @@ public partial class SilksongPlaygroundPlugin : BaseUnityPlugin
         Log.Init(Logger);
         Log.Info($"Plugin {Name} ({Id}) has loaded!");
 
-        harmony = Harmony.CreateAndPatchAll(typeof(SilksongPlaygroundPlugin).Assembly);
+        harmony = Harmony.CreateAndPatchAll(typeof(DisableSteamPlugin).Assembly);
     }
 
     private void OnDestroy()
