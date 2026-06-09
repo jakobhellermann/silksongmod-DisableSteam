@@ -1,4 +1,5 @@
 using BepInEx;
+using SilksongPlayground.Source;
 
 namespace SilksongPlayground;
 
@@ -8,7 +9,15 @@ public partial class SilksongPlaygroundPlugin : BaseUnityPlugin
 {
     private void Awake()
     {
+        Log.Init(Logger);
+        
         // Put your initialization logic here
-        Logger.LogInfo($"Plugin {Name} ({Id}) has loaded!");
+        Log.Info($"Plugin {Name} ({Id}) has loaded!");
+    }
+
+    private void OnDestroy()
+    {
+        // Clean up everything, in order to support hot reloading
+        Log.Info($"Plugin {Name} ({Id}) has been unloaded!");
     }
 }
